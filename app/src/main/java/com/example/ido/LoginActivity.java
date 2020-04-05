@@ -5,9 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+
+    EditText emailAddress, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,12 +20,20 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        validation();
-        Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
-        startActivity(mainActivity);
+        if (validation()) {
+            Intent mainActivity = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(mainActivity);
+        } else {
+            Toast.makeText(this, "Incorrect login.", Toast.LENGTH_SHORT).show();
+        }
     }
 
-    private void validation() {
+    private boolean validation() {
+        emailAddress = findViewById(R.id.loginEmailAddress);
+        password = findViewById(R.id.loginPassword);
+
+        String email = emailAddress.getText().toString().trim();
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     public void goToRegistration(View view) {
