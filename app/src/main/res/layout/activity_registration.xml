@@ -33,7 +33,7 @@
             android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/registrationEmailAdress"
+            android:id="@+id/registrationEmailAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -64,18 +64,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:onClick="register"
             android:text="@string/registration" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/goToLoginButton"
+        android:id="@+id/goToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_margin="32dp"
+        android:onClick="goToLogin"
         android:text="@string/login_here"
         android:textSize="16sp" />
-
 
 </RelativeLayout>
