@@ -23,12 +23,12 @@ public class MyGroupsFragment extends Fragment {
 
         final ArrayList<Group> groups = new ArrayList<>();
 
-        groups.add(new Group("Group 1", false));
-        groups.add(new Group("Group 2", false));
-        groups.add(new Group("Group 3", true));
-        groups.add(new Group("Group 4", false));
-        groups.add(new Group("Group 5", true));
-        groups.add(new Group("Group 6", true));
+        groups.add(new Group("Group 1", View.INVISIBLE));
+        groups.add(new Group("Group 2", View.INVISIBLE));
+        groups.add(new Group("Group 3", View.VISIBLE));
+        groups.add(new Group("Group 4", View.INVISIBLE));
+        groups.add(new Group("Group 5", View.VISIBLE));
+        groups.add(new Group("Group 6", View.VISIBLE));
 
         GroupAdapter adapter = new GroupAdapter(getActivity(), groups);
         groupListView = view.findViewById(R.id.groups);

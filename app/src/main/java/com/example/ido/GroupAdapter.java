@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -33,8 +34,8 @@ public class GroupAdapter extends ArrayAdapter<Group> {
         assert currentGroup != null;
         groupname.setText(currentGroup.getGroupName());
 
-        RadioButton newMessage = listItemView.findViewById(R.id.newMessage);
-        newMessage.setChecked(currentGroup.getNewMessage());
+        ImageView newMessage = listItemView.findViewById(R.id.newMessage);
+        newMessage.setVisibility(currentGroup.getNewMessage());
 
         return listItemView;
     }

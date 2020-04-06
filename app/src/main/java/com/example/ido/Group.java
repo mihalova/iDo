@@ -3,15 +3,15 @@ package com.example.ido;
 class Group {
 
     private String groupName;
-    private boolean newMessage;
+    private int newMessage;
 
 
-    Group(String groupName, boolean newMessage){
+    Group(String groupName, int newMessage){
         this.groupName = groupName;
         this.newMessage = newMessage;
     }
 
-    boolean getNewMessage() { return this.newMessage; }
+   int getNewMessage() { return this.newMessage; }
 
     String getGroupName() {
         return groupName;
