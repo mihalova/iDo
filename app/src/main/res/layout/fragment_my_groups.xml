@@ -7,14 +7,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="32sp"
-        android:text="@string/groups"
-        android:gravity="center"
-        android:layout_margin="16dp"/>
-
     <ListView
         android:id="@+id/groups"
         android:layout_width="match_parent"
